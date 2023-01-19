@@ -1,0 +1,93 @@
+Date :- 19-January-2023 
+Today's Assignment 
+
+Q1. Describe higher order functions.
+Solutions :- 
+
+A higher order function is a
+function that takes a function as an argument, or returns a function.
+
+Example of Higher Order Function :- 
+
+
+1. Map : This returns copy original array means new array.
+Ex:- 
+
+let arr = [1, 2, 3, 4, 5];
+const dblArr = arr.map((Num) => {
+  return Num * 2;
+});
+console.log(dblArr);
+
+
+
+2. filter : This will filter array based on condition .
+
+const giveOdd = arr.filter( (Num) => {
+  return Num % 2 === 1;
+});
+console.log(giveOdd); 
+
+
+3. reduce : This will reduce and combine complete array and gives result in single entity.
+
+
+const sum = arr.reduce((acc , num) => {
+  return  acc += num;
+},0);
+
+console.log(sum); 
+
+
+4.sort :sort will return reference of original array
+Ex:- 
+
+let arr = [1, 100 ,111, 1110,1000];
+arr.sort((a,b) => a-b < 0 ? -1 : 1); // correct sorting
+console.log(arr);
+
+5.forEach : This is works like for loop and used to print complete array.
+
+Ex: 
+arr.forEach((num) => {
+    return num *2;
+});
+
+console.log(val);
+
+
+
+
+
+Q2. write use cases + any one code example for map, filter and reduce.
+Solutin :- 
+1.Map :This returns copy original array means new array.
+
+Ex :- 
+let arr = [1, 2, 3, 4, 5];
+const dblArr = arr.map((Num) => {
+  return Num * 2;
+});
+console.log(dblArr);
+
+2. filter : This will filter array based on condition and used to find even and odd number for example.
+
+Ex :
+let arr = [1, 2, 3, 4, 5];
+const giveOdd = arr.filter( (Num) => {
+  return Num % 2 === 1;
+});
+console.log(giveOdd); 
+
+
+3.Reduce : This is used to reduce complete array into single entity.
+Ex:
+
+let arr = [1, 2, 3, 4, 5];
+const sum = arr.reduce((acc , num) => {
+  return  acc += num;
+},0);
+
+console.log(sum); 
+
+
