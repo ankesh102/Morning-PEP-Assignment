@@ -1,0 +1,80 @@
+Date : 22-January - 2023
+
+Today's Assignment 
+
+
+Q1. Read about HTTP requests and different methods.
+
+Ans :- 
+
+HTTP Request :-> HTTP requests are messages sent by the client to initiate an action on the server.
+			Also this HTTP request is designed to enable communication between client and 
+			servers. This works as a request-response protocol between client and server.
+
+
+Different Methods are :- 
+1.Get : This method is used to retrieve data from server and
+		 It is a read only type method.
+
+2.Post : This method is used to send data to server and create new resources,
+		 and is also used to create new data entry inside parent element.
+
+3.Put :- This method is used to update existing version  as a new updated version completely.
+
+4.Patch :- This method is used to update existing resources to specific changes
+		 only or that changes which came in updated version.
+
+5.Delete :- This method is used to delete resources specified by its url .
+
+
+Q2. How you do make HTTP requests via axios.
+
+Ans :- 
+Program to make HTTP request via Axios :
+ 
+
+import './App.css';
+import axios from "axios";
+import {useState} from "react";
+
+function App() {
+
+  const [userInfo, setUserInfo] = useState(null);
+
+  const getUserInfo = () => {
+    const resp = axios.get("https://randomuser.me/api/");
+    // console.log("response " +resp);
+    resp
+      .then((data) => {
+        let info = data.data.results[0];
+        console.log("Fullfilled");
+        setUserInfo(info);
+        // console.log(info);
+        console.log(userInfo);
+      }) 
+      .catch((err) => {
+        console.log(err);
+        console.log("rejected");
+      })
+  }
+
+
+
+
+  return (
+    <div className="App">
+      <p>Hello Ankesh !!</p>
+      <button  onClick ={getUserInfo}>Click Me</button>
+      {userInfo && <p>random user gender - {userInfo.gender}</p>}
+    </div>
+  );
+}
+
+export default App;
+
+
+			============================================		END OF ASSIGNMENT            ==========================================================
+
+
+
+
